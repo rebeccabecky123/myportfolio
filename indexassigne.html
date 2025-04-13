@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<html>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+
+  <main class="flex items-center justify-center min-h-screen">
+    <section class="bg-yellow-300 dark:bg-gray-800 shadow-lg rounded-2xl p-6 max-w-sm w-full transition-all duration-300">
+      <article class="text-center">
+        <figure>
+          <img src="becky.jpg" alt="Becky" class="w-40 h-25 rounded-full mx-auto">
+          <figcaption class="mt-4 text-xl font-semibold">Rebecca</figcaption>
+        </figure>
+        <p class="mt-2 text-gray-700 dark:text-gray-300">
+          My name is Byamungu Rebecca. I'm 19 years old. I live with my family. We are 8 children and I am the 4th.I came here without knowing enything but i start know something.!
+        </p>
+        <address class="mt-2 not-italic text-sm text-gray-600 dark:text-gray-400">
+          Kigali, Rwanda, Gikondo | 
+          <a href="mailto:rebeccabyamungu6@gmail.com" class="underline">rebeccabyamungu6@gmail.com</a>
+        </address>
+
+        <time datetime="2025-04-12" class="block mt-2 text-xs text-gray-500">
+          Updated: April 12, 2025
+        </time>
+
+        <button id="moreBtn" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded transition">
+          More about Me
+        </button>
+
+        <div id="moreContent" class="hidden mt-4 text-left transition-all">
+          <h3 class="font-bold mb-1">Hobbies:</h3>
+          <ul class="list-disc list-inside">
+            <li>Taking pictures</li>
+            <li>Coding</li>
+            <li>Watching movies</li>
+            <li>Singing and listening to music</li>
+            <li>Reading books</li>
+          </ul>
+      In order to archieve your dream you must sacrifice of some things 
+        </div>
+
+        <div id="quote" class="mt-4 text-sm italic text-purple-600 dark:text-purple-400 animate-pulse"></div>
+      </article>
+    </section>
+  </main>
+
+  
+  <script>
+    const moreBtn = document.getElementById("moreBtn");
+    const moreContent = document.getElementById("moreContent");
+
+    moreBtn.addEventListener("click", () => {
+      moreContent.classList.toggle("hidden");
+    });
+
+    const quotes = [
+      "Be yourself.",
+      "You are capable of amazing things.",
+      "Never stop learning.",
+      "Believe in yourself!",
+      "Never give up",
+    ];
+
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById("quote").textContent = randomQuote;
+  </script>
+  <marquee behavior="scroll"direction="left" scrollamount="5"style="background-color: #1f2937; color: #10b981; padding: 10px; font-weight: bold;">
+    Hello, I'm Becky you are welcome to my website!
+    </marquee>
+
+</body>
+</head>
+</html>
